@@ -1,0 +1,7 @@
+<button mat-button [matMenuTriggerFor]="menu">Demos</button>
+<mat-menu #menu="matMenu">
+  <li routerLink="calendar" mat-menu-item>Calendar Widgets</li>
+  <li routerLink="forms"mat-menu-item>Forms</li>
+
+</mat-menu>
+<router-outlet></router-outlet>

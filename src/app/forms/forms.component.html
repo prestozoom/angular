@@ -1,0 +1,65 @@
+<div class="example-container center">
+<p class="center">Login</p>
+  <mat-form-field class="center" appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="Username" [(ngModel)]="userinput" required username #username="ngModel">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="center" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput placeholder="Password" [(ngModel)]="passinput" required password #password="ngModel">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <div class="center">
+    <mat-checkbox>Remember me</mat-checkbox> <br><br>
+  <button mat-raised-button color="primary">Submit</button> &nbsp;
+    <button mat-raised-button color="primary">Forgot Password?</button>
+  </div>
+  <mat-divider></mat-divider>
+</div>
+
+
+
+<br>
+
+
+
+<div class="example-container center">
+  <p class="center">Register</p>
+  <mat-form-field class="center" appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="Username" [(ngModel)]="userinputt" required usernamee #usernamee="ngModel">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="center" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Username" [(ngModel)]="emailinput" required email #email="ngModel">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="center" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput placeholder="Password" [(ngModel)]="passinput1" required password #password1="ngModel">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="center" appearance="outline">
+  <mat-label>Retype Password</mat-label>
+  <input type="password" matInput placeholder="Retype Password" [(ngModel)]="passinput2" required password #password2="ngModel">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="center">
+    <input matInput [matDatepicker]="picker" placeholder="Birth Date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="center">
+    <button mat-raised-button color="primary">Submit</button> &nbsp;
+    <button mat-raised-button color="primary">Forgot Password?</button>
+  </div>
+  <mat-divider></mat-divider>
+</div>

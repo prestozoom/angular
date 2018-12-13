@@ -1,0 +1,10 @@
+mat-grid-tile {
+  background: #d9dadb;
+}
+span {
+  display: block;
+}
+.datepickerdemoCalendar {
+  /** Demo styles for mdCalendar. */ }
+  .datepickerdemoCalendar label {
+    font-size: x-small; }
