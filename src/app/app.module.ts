@@ -17,20 +17,25 @@ import { MatDatepickerModule,
           MatCardModule,
           MatSelectModule,
           MatDividerModule,
-          MatCheckboxModule
+          MatCheckboxModule,
+          MatToolbarModule,
+          MatTableModule, MatPaginatorModule, MatSortModule
           } from '@angular/material';
+import { DatatableComponent } from './datatable/datatable.component';
 
 
 const appRoutes: Routes = [
 { path: 'calendar', component: CalendarComponent },
-{ path: 'forms', component: FormsComponent }
+{ path: 'forms', component: FormsComponent },
+{ path: 'tables', component: DatatableComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
-    FormsComponent
+    FormsComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,
@@ -49,8 +54,12 @@ const appRoutes: Routes = [
     MatInputModule,
     MatDividerModule,
     MatCheckboxModule,
+    MatToolbarModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [MatDatepickerModule,  ],
   bootstrap: [AppComponent]

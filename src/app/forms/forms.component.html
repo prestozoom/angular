@@ -1,54 +1,41 @@
-<div class="example-container center">
-<p class="center">Login</p>
-  <mat-form-field class="center" appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput placeholder="Username" [(ngModel)]="userinput" required username #username="ngModel">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-  </mat-form-field>
-  <mat-form-field class="center" appearance="outline">
-    <mat-label>Password</mat-label>
-    <input type="password" matInput placeholder="Password" [(ngModel)]="passinput" required password #password="ngModel">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-  </mat-form-field>
+<mat-toolbar color="primary">
+<mat-toolbar-row>
+<p>Register Form</p>
+</mat-toolbar-row>
+</mat-toolbar>
 
-  <div class="center">
-    <mat-checkbox>Remember me</mat-checkbox> <br><br>
-  <button mat-raised-button color="primary">Submit</button> &nbsp;
-    <button mat-raised-button color="primary">Forgot Password?</button>
-  </div>
-  <mat-divider></mat-divider>
-</div>
-
-
-
-<br>
-
-
-
+<form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onRegisterSubmit()">
 <div class="example-container center">
   <p class="center">Register</p>
+
+  <mat-form-field class="center" appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input id="fname" matInput formControlName="fname" [(ngModel)]="user.fname" placeholder="First Name">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="center" appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input id="lname" matInput formControlName="lname" [(ngModel)]="user.lname" placeholder="Last Name">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
   <mat-form-field class="center" appearance="outline">
     <mat-label>Username</mat-label>
-    <input matInput placeholder="Username" [(ngModel)]="userinputt" required usernamee #usernamee="ngModel">
+    <input id="uname" matInput formControlName="uname" [(ngModel)]="user.uname" placeholder="Username">
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
   </mat-form-field>
 
   <mat-form-field class="center" appearance="outline">
     <mat-label>Email</mat-label>
-    <input matInput placeholder="Username" [(ngModel)]="emailinput" required email #email="ngModel">
+    <input id="email" matInput formControlName="email" [(ngModel)]="user.email" placeholder="Email">
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
   </mat-form-field>
 
   <mat-form-field class="center" appearance="outline">
     <mat-label>Password</mat-label>
-    <input type="password" matInput placeholder="Password" [(ngModel)]="passinput1" required password #password1="ngModel">
+    <input id="password" matInput formControlName="password" [(ngModel)]="user.password" placeholder="Password">
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-  </mat-form-field>
-
-  <mat-form-field class="center" appearance="outline">
-  <mat-label>Retype Password</mat-label>
-  <input type="password" matInput placeholder="Retype Password" [(ngModel)]="passinput2" required password #password2="ngModel">
-  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
   </mat-form-field>
 
   <mat-form-field class="center">
@@ -58,8 +45,11 @@
   </mat-form-field>
 
   <div class="center">
-    <button mat-raised-button color="primary">Submit</button> &nbsp;
+    <button type="submit" mat-raised-button color="primary" [disabled]="!registerForm.valid">Submit</button> &nbsp;
     <button mat-raised-button color="primary">Forgot Password?</button>
   </div>
+
   <mat-divider></mat-divider>
 </div>
+
+</form>

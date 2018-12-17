@@ -1,7 +1,13 @@
-<button mat-button [matMenuTriggerFor]="menu">Demos</button>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+<a mat-button [matMenuTriggerFor]="menu">Demos</a>
+    <a mat-button routerLink="tables">Tables</a>
+    <a mat-button href="https://demo-prestozoom.herokuapp.com/" target="_blank">Gobbler Demo</a>
 <mat-menu #menu="matMenu">
   <li routerLink="calendar" mat-menu-item>Calendar Widgets</li>
   <li routerLink="forms"mat-menu-item>Forms</li>
 
 </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
 <router-outlet></router-outlet>
