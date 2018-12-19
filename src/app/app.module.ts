@@ -21,13 +21,16 @@ import { MatDatepickerModule,
           MatToolbarModule,
           MatTableModule, MatPaginatorModule, MatSortModule
           } from '@angular/material';
-import { DatatableComponent } from './datatable/datatable.component';
 
+import { DatatableComponent } from './datatable/datatable.component';
+import { GobblerComponent } from './datatable/gobbler/gobbler.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
 { path: 'calendar', component: CalendarComponent },
 { path: 'forms', component: FormsComponent },
-{ path: 'tables', component: DatatableComponent }
+{ path: 'tables', component: DatatableComponent },
+{ path: 'tables/gobbler', component: GobblerComponent }
 ]
 
 @NgModule({
@@ -35,7 +38,8 @@ const appRoutes: Routes = [
     AppComponent,
     CalendarComponent,
     FormsComponent,
-    DatatableComponent
+    DatatableComponent,
+    GobblerComponent
   ],
   imports: [
     BrowserModule,
@@ -60,8 +64,8 @@ const appRoutes: Routes = [
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-  ],
-  providers: [MatDatepickerModule,  ],
+    HttpClientModule  ],
+  providers: [MatDatepickerModule,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

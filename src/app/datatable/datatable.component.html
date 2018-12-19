@@ -1,5 +1,3 @@
-
-
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <a mat-button [matMenuTriggerFor]="clients">Clients</a>
@@ -7,7 +5,7 @@
 </mat-toolbar>
 
 <mat-menu #clients="matMenu">
-  <li mat-menu-item>Gobbler</li>
+  <li mat-menu-item routerLink="gobbler">Gobbler</li>
   <li mat-menu-item>Client 2</li>
 </mat-menu>
 
